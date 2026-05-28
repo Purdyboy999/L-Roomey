@@ -1252,9 +1252,118 @@ input, select, textarea, button {
 }
 
 @media (max-width: 576px) {
+    /* Booking Section Mobile Fixes */
     .booking-info-panel,
     .booking-form-panel {
-        padding: 30px 20px;
+        padding: 24px 16px;
+    }
+    .booking-info-panel h2 {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+    .booking-info-panel p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    .steps-list {
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+    .step-item {
+        gap: 10px;
+    }
+    .step-num {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+    .step-text {
+        font-size: 0.85rem;
+    }
+    .cs-contact-badge {
+        padding: 10px 12px;
+        gap: 10px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .cs-icon {
+        font-size: 1.4rem;
+    }
+    .cs-info .label {
+        font-size: 0.7rem;
+    }
+    .cs-info .phone {
+        font-size: 0.9rem;
+    }
+    .form-title {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+        gap: 6px;
+    }
+    .form-group label {
+        font-size: 0.8rem;
+    }
+    .form-input {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+    .btn-large {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+
+    /* Fleet Section 2-Column Grid on Mobile */
+    .fleet-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .fleet-card {
+        border-radius: 12px;
+    }
+    .fleet-img-wrapper {
+        height: 110px;
+    }
+    .fleet-info {
+        padding: 12px;
+    }
+    .fleet-name {
+        font-size: 1rem;
+        margin-bottom: 6px;
+        line-height: 1.2;
+    }
+    .fleet-capacity {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+        margin-bottom: 10px;
+    }
+    .fleet-facilities {
+        display: none; /* Hide detailed facilities list on mobile to save space */
+    }
+    .fleet-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        border-top: 1px solid var(--border-color);
+        padding-top: 10px;
+        margin-top: auto;
+    }
+    .fleet-price-box {
+        text-align: center;
+    }
+    .price-label {
+        font-size: 0.65rem;
+    }
+    .fleet-price {
+        font-size: 0.95rem;
+    }
+    .fleet-footer .btn {
+        width: 100%;
+        padding: 8px 10px;
+        font-size: 0.75rem;
+        border-radius: 6px;
     }
 }
 
