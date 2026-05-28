@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElRoomeny Travel - Agen Travel Premium Kediri, Malang, Surabaya</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="ElRoomeny Travel menyediakan layanan travel eksekutif premium untuk rute Kediri, Malang, dan Surabaya. Armada bersih, driver ramah, tepat waktu, dan harga terjangkau.">
+    <meta name="keywords" content="elroomeny travel, travel kediri malang, travel kediri surabaya, travel surabaya kediri, travel malang kediri, travel premium kediri, travel murah kediri">
+    <meta name="author" content="ElRoomeny Travel">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="ElRoomeny Travel - Travel Eksekutif Kediri • Malang • Surabaya">
+    <meta property="og:description" content="Perjalanan nyaman dengan armada modern (Hiace, Innova, Avanza, Elf) bersama ElRoomeny Travel. Pesan tiket Anda sekarang secara instan via WhatsApp.">
+    <meta property="og:image" content="assets/hero-bg.png">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/toyota-hiace.png">
+
+    <!-- Google Fonts: Outfit (Clean, Luxury, Geometric) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar-header" id="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="nav-logo" id="navLogo">
+                <span class="logo-accent">L-Roomey</span> <span class="logo-light">Travel</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+                    <li><a href="#layanan" class="nav-link">Layanan</a></li>
+                    <li><a href="#armada" class="nav-link">Armada</a></li>
+                    <li><a href="#keunggulan" class="nav-link">Keunggulan</a></li>
+                    <li><a href="#testimoni" class="nav-link">Testimoni</a></li>
+                    <li><a href="#pesan" class="btn-booking-nav">Pesan Sekarang</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="beranda" style="background-image: linear-gradient(rgba(15, 15, 15, 0.75), rgba(15, 15, 15, 0.95)), url('assets/hero-bg.png');">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h2 class="hero-tagline reveal-item">Premium & Executive Travel</h2>
+                <h1 class="hero-title reveal-item">L-Roomey Travel</h1>
+                <p class="hero-subtitle reveal-item">Travel Nyaman & Tepat Waktu Rute Kediri • Malang • Surabaya PP</p>
+                <div class="hero-buttons reveal-item">
+                    <a href="#pesan" class="btn btn-gold btn-glow">Pesan Sekarang <i class="fas fa-calendar-alt"></i></a>
+                    <a href="#armada" class="btn btn-outline">Lihat Armada <i class="fas fa-car"></i></a>
+                </div>
+            </div>
+            
+            <!-- Quick Booking Card for Luxury Look & Quick Action -->
+            <div class="hero-quick-card reveal-item">
+                <div class="quick-card-title">
+                    <i class="fas fa-map-marked-alt text-gold"></i>
+                    <span>Cari Perjalanan Anda</span>
+                </div>
+                <div class="quick-card-grid">
+                    <div class="quick-field">
+                        <label for="quickAsal">Kota Asal</label>
+                        <select id="quickAsal" class="quick-input">
+                            <option value="Kediri">Kediri</option>
+                            <option value="Surabaya">Surabaya</option>
+                            <option value="Malang">Malang</option>
+                        </select>
+                    </div>
+                    <div class="quick-field">
+                        <label for="quickTujuan">Kota Tujuan</label>
+                        <select id="quickTujuan" class="quick-input">
+                            <option value="Surabaya">Surabaya</option>
+                            <option value="Kediri">Kediri</option>
+                            <option value="Malang">Malang</option>
+                        </select>
+                    </div>
+                    <button type="button" id="quickSearchBtn" class="btn btn-gold quick-btn">
+                        <span>Pesan</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-down">
+            <span>Scroll kebawah untuk detail</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- SECTION LAYANAN -->
+    <section class="services-section section-padding" id="layanan">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Layanan Perjalanan</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Kami menyediakan jadwal keberangkatan travel harian reguler pulang-pergi (PP) dengan rute utama sebagai berikut</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card reveal-item">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3 class="service-route">Kediri <i class="fas fa-long-arrow-alt-right"></i> Surabaya</h3>
+                    <p class="service-desc">Layanan travel reguler Kediri menuju Surabaya / Bandara Juanda / Pelabuhan Tanjung Perak.</p>
+                    <div class="service-price">Mulai <span class="price-value">120K</span></div>
+                    <a href="#pesan" onclick="selectRoute('Kediri', 'Surabaya')" class="service-action-btn">Pilih Rute <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card reveal-item">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3 class="service-route">Kediri <i class="fas fa-long-arrow-alt-right"></i> Malang</h3>
+                    <p class="service-desc">Perjalanan berpanorama indah dari Kediri menuju Kota Pendidikan & Pariwisata Malang Kota / Batu.</p>
+                    <div class="service-price">Mulai <span class="price-value">100K</span></div>
+                    <a href="#pesan" onclick="selectRoute('Kediri', 'Malang')" class="service-action-btn">Pilih Rute <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card reveal-item">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3 class="service-route">Surabaya <i class="fas fa-long-arrow-alt-right"></i> Kediri</h3>
+                    <p class="service-desc">Penjemputan dari Surabaya (Bandara/Stasiun/Hotel) untuk perjalanan yang aman ke Kediri Raya.</p>
+                    <div class="service-price">Mulai <span class="price-value">120K</span></div>
+                    <a href="#pesan" onclick="selectRoute('Surabaya', 'Kediri')" class="service-action-btn">Pilih Rute <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card reveal-item">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3 class="service-route">Malang <i class="fas fa-long-arrow-alt-right"></i> Kediri</h3>
+                    <p class="service-desc">Antar jemput dari Malang Kota menuju Kediri dengan pelayanan premium kelas eksekutif.</p>
+                    <div class="service-price">Mulai <span class="price-value">100K</span></div>
+                    <a href="#pesan" onclick="selectRoute('Malang', 'Kediri')" class="service-action-btn">Pilih Rute <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PILIHAN MOBIL (FLEET) -->
+    <section class="fleet-section section-padding bg-darker" id="armada">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pilihan Armada</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Kendaraan prima dan terawat demi keamanan dan kenyamanan perjalanan Anda</p>
+            </div>
+
+            <!-- Fleet Cards Container (dynamically loaded from JS) -->
+            <div class="fleet-grid" id="fleetGrid">
+                <!-- Skeleton Loading Placeholders (Replaced by JS) -->
+                <div class="fleet-card skeleton">
+                    <div class="fleet-img-wrapper skeleton-img"></div>
+                    <div class="fleet-info">
+                        <div class="skeleton-text title"></div>
+                        <div class="skeleton-text line"></div>
+                        <div class="skeleton-text line"></div>
+                    </div>
+                </div>
+                <div class="fleet-card skeleton">
+                    <div class="fleet-img-wrapper skeleton-img"></div>
+                    <div class="fleet-info">
+                        <div class="skeleton-text title"></div>
+                        <div class="skeleton-text line"></div>
+                        <div class="skeleton-text line"></div>
+                    </div>
+                </div>
+                <div class="fleet-card skeleton">
+                    <div class="fleet-img-wrapper skeleton-img"></div>
+                    <div class="fleet-info">
+                        <div class="skeleton-text title"></div>
+                        <div class="skeleton-text line"></div>
+                        <div class="skeleton-text line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION KEUNGGULAN -->
+    <section class="features-section section-padding" id="keunggulan">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Keunggulan Kami</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Mengapa memilih L-Roomey Travel untuk perjalanan Anda?</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card reveal-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-id-card-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Driver Berpengalaman</h3>
+                    <p class="feature-desc">Pengemudi profesional, ramah, dan hapal rute perjalanan demi kenyamanan dan keselamatan Anda.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-card reveal-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="feature-title">Tepat Waktu</h3>
+                    <p class="feature-desc">Jadwal keberangkatan yang konsisten dan efisiensi rute untuk memastikan Anda sampai tepat pada waktunya.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-card reveal-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <h3 class="feature-title">Mobil Bersih</h3>
+                    <p class="feature-desc">Seluruh armada dicuci bersih dan wangi secara rutin sebelum menjemput setiap penumpang.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="feature-card reveal-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3 class="feature-title">Full AC & Nyaman</h3>
+                    <p class="feature-desc">Sistem pendingin udara kabin yang prima serta kelegaan kabin premium di setiap tipe armada.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="feature-card reveal-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3 class="feature-title">Harga Terjangkau</h3>
+                    <p class="feature-desc">Harga tiket terbaik di kelasnya untuk layanan executive class door-to-door (jemput depan pintu).</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="feature-card reveal-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="feature-title">Fast Response</h3>
+                    <p class="feature-desc">Layanan CS admin responsif siap membantu pemesanan, pembatalan, dan info rute kapanpun dibutuhkan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION TESTIMONI -->
+    <section class="testimonials-section section-padding bg-darker" id="testimoni">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Apa Kata Mereka</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Kepuasan pelanggan adalah prioritas utama dan bukti dedikasi kami</p>
+            </div>
+
+            <!-- Testimonials Carousel Slider -->
+            <div class="testimonials-slider-container reveal-item">
+                <div class="testimonials-slider" id="testimonialsSlider">
+                    <!-- Testimonial Item 1 -->
+                    <div class="testimonial-card active">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">"Paling suka naik travel ini kalau mau ke Surabaya dari Kediri. Drivernya santun, mobilnya wangi dan AC dingin banget. Sampai Juanda tepat waktu."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4 class="author-name">Budi Santoso</h4>
+                                <p class="author-role">Pekerja Swasta, Kediri</p>
+                            </div>
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Item 2 -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">"Innova Reborn-nya mewah banget. Serasa naik mobil pribadi. Pelayanan admin ramah dan jemput langsung depan rumah tanpa biaya tambahan yang ribet."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4 class="author-name">Indah Lestari</h4>
+                                <p class="author-role">Mahasiswi, Malang</p>
+                            </div>
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Item 3 -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">"Sangat direkomendasikan untuk travel keluarga. Hiace bersih sekali dan kabinnya sangat lega. Harga bersahabat untuk rute Surabaya - Kediri."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4 class="author-name">Ahmad Rian</h4>
+                                <p class="author-role">Wiraswasta, Surabaya</p>
+                            </div>
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-4-half fa-star"></i> <!-- Rating 5 stars indeed -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Dots -->
+                <div class="slider-dots" id="sliderDots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION FORM PEMESANAN -->
+    <section class="booking-section section-padding" id="pesan">
+        <div class="container">
+            <div class="booking-wrapper reveal-item">
+                <div class="booking-info-panel">
+                    <div class="info-panel-content">
+                        <span class="badge-gold">BOOKING MUDAH</span>
+                        <h2>Pesan Travel Secara Instan</h2>
+                        <p>Silakan isi detail perjalanan Anda pada formulir. Setelah menekan tombol kirim, sistem kami akan langsung menyusun pesan pemesanan dan mengarahkan Anda ke WhatsApp Customer Service kami.</p>
+                        
+                        <div class="steps-list">
+                            <div class="step-item">
+                                <div class="step-num">1</div>
+                                <div class="step-text">Isi data lengkap & pilih tipe armada</div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">2</div>
+                                <div class="step-text">Tinjau ulang detail pesanan Anda</div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">3</div>
+                                <div class="step-text">Kirim form, konfirmasi otomatis via WhatsApp</div>
+                            </div>
+                        </div>
+
+                        <div class="cs-contact-badge">
+                            <div class="cs-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="cs-info">
+                                <span class="label">Admin WhatsApp CS</span>
+                                <span class="phone" id="csPhoneDisplay">+62 858-0073-4579</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form-panel">
+                    <form id="bookingForm" class="booking-form">
+                        <h3 class="form-title">Formulir Pemesanan</h3>
+                        
+                        <div class="form-group-row">
+                            <!-- Nama Penumpang -->
+                            <div class="form-group">
+                                <label for="nama"><i class="fas fa-user text-gold"></i> Nama Lengkap</label>
+                                <input type="text" id="nama" placeholder="Masukkan nama lengkap" required class="form-input">
+                            </div>
+
+                            <!-- Nomor WhatsApp -->
+                            <div class="form-group">
+                                <label for="noWa"><i class="fab fa-whatsapp text-gold"></i> Nomor WhatsApp</label>
+                                <input type="tel" id="noWa" placeholder="Contoh: 08123456789" required class="form-input">
+                            </div>
+                        </div>
+
+                        <div class="form-group-row">
+                            <!-- Kota Penjemputan -->
+                            <div class="form-group">
+                                <label for="penjemputan"><i class="fas fa-map-marker-alt text-gold"></i> Alamat / Kota Penjemputan</label>
+                                <input type="text" id="penjemputan" placeholder="Contoh: Jl. Dhoho No.10, Kediri" required class="form-input">
+                            </div>
+
+                            <!-- Kota Tujuan -->
+                            <div class="form-group">
+                                <label for="tujuan"><i class="fas fa-map-pin text-gold"></i> Alamat / Kota Tujuan</label>
+                                <input type="text" id="tujuan" placeholder="Contoh: Bandara Juanda, Surabaya" required class="form-input">
+                            </div>
+                        </div>
+
+                        <div class="form-group-row">
+                            <!-- Tanggal Berangkat -->
+                            <div class="form-group">
+                                <label for="tanggal"><i class="fas fa-calendar-day text-gold"></i> Tanggal Berangkat</label>
+                                <input type="date" id="tanggal" required class="form-input">
+                            </div>
+
+                            <!-- Jumlah Penumpang -->
+                            <div class="form-group">
+                                <label for="jumlah"><i class="fas fa-users text-gold"></i> Jumlah Penumpang</label>
+                                <input type="number" id="jumlah" min="1" max="20" placeholder="Contoh: 2" required class="form-input">
+                            </div>
+                        </div>
+
+                        <!-- Pilihan Mobil -->
+                        <div class="form-group">
+                            <label for="mobil"><i class="fas fa-car text-gold"></i> Pilihan Armada</label>
+                            <select id="mobil" class="form-input form-select" required>
+                                <option value="" disabled selected>Pilih jenis armada mobil</option>
+                                <!-- Will be loaded from script JS dynamically -->
+                            </select>
+                        </div>
+
+                        <!-- Catatan Tambahan -->
+                        <div class="form-group">
+                            <label for="catatan"><i class="fas fa-comment-alt text-gold"></i> Catatan Tambahan (Opsional)</label>
+                            <textarea id="catatan" rows="3" placeholder="Masukkan instruksi khusus atau rincian barang bawaan Anda..." class="form-input form-textarea"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-gold btn-block btn-large">
+                            Kirim ke WhatsApp <i class="fab fa-whatsapp"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-section">
+        <div class="container footer-container">
+            <div class="footer-col footer-about">
+                <a href="#" class="footer-logo">
+                    <span class="logo-accent">L-Roomey</span> <span class="logo-light">Travel</span>
+                </a>
+                <p class="footer-desc">Penyedia jasa transportasi travel eksekutif terbaik yang menghubungkan kota Kediri, Malang, dan Surabaya dengan armada luxury terbaru.</p>
+                <div class="footer-socials">
+                    <a href="https://wa.me/6285800734579" class="social-icon" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h4 class="footer-col-title">Navigasi Cepat</h4>
+                <ul>
+                    <li><a href="#beranda"><i class="fas fa-chevron-right text-gold"></i> Beranda</a></li>
+                    <li><a href="#layanan"><i class="fas fa-chevron-right text-gold"></i> Layanan</a></li>
+                    <li><a href="#armada"><i class="fas fa-chevron-right text-gold"></i> Armada Mobil</a></li>
+                    <li><a href="#keunggulan"><i class="fas fa-chevron-right text-gold"></i> Keunggulan</a></li>
+                    <li><a href="#testimoni"><i class="fas fa-chevron-right text-gold"></i> Testimoni</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-routes">
+                <h4 class="footer-col-title">Rute Layanan</h4>
+                <ul>
+                    <li><span><i class="fas fa-map-marker-alt text-gold"></i> Kediri - Surabaya (PP)</span></li>
+                    <li><span><i class="fas fa-map-marker-alt text-gold"></i> Kediri - Malang (PP)</span></li>
+                    <li><span><i class="fas fa-map-marker-alt text-gold"></i> Surabaya - Kediri (PP)</span></li>
+                    <li><span><i class="fas fa-map-marker-alt text-gold"></i> Malang - Kediri (PP)</span></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contact">
+                <h4 class="footer-col-title">Kontak Kami</h4>
+                <ul class="contact-details">
+                    <li>
+                        <i class="fas fa-phone-alt text-gold"></i>
+                        <span>0858-0073-4579</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope text-gold"></i>
+                        <span>info@Lroomeytravel.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt text-gold"></i>
+                        <span>Kediri Kota, Jawa Timur, Indonesia</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p class="copyright">&copy; 2026 L-Roomey Travel. All Rights Reserved. Designed for Luxury Travel.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span class="divider">|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/6285800734579" class="whatsapp-floating-btn" id="waFloatingBtn" target="_blank" aria-label="Chat WhatsApp Admin">
+        <i class="fab fa-whatsapp"></i>
+        <span class="floating-tooltip">Butuh bantuan? Chat kami</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
