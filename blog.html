@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Wisata & Perjalanan - L-Roomey Travel</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Kumpulan artikel menarik, tips perjalanan, kuliner khas, dan rujukan destinasi wisata terbaik di Kediri, Malang, dan Surabaya dari L-Roomey Travel.">
+    <meta name="keywords" content="blog travel kediri, tips wisata malang, kuliner kediri, travel surabaya malang, elroomeny blog">
+    <meta name="author" content="L-Roomey Travel">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Blog Wisata & Perjalanan - L-Roomey Travel">
+    <meta property="og:description" content="Kumpulan artikel menarik, tips perjalanan, kuliner khas, dan rujukan destinasi wisata terbaik di Jawa Timur.">
+    <meta property="og:image" content="assets/hero-bg.png">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/toyota-hiace.png">
+
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar-header scrolled" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-accent">L-Roomey</span> <span class="logo-light">Travel</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html#beranda" class="nav-link">Beranda</a></li>
+                    <li><a href="index.html#layanan" class="nav-link">Layanan</a></li>
+                    <li><a href="index.html#armada" class="nav-link">Armada</a></li>
+                    <li><a href="index.html#keunggulan" class="nav-link">Keunggulan</a></li>
+                    <li><a href="index.html#testimoni" class="nav-link">Testimoni</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="index.html#pesan" class="btn-booking-nav">Pesan Sekarang</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- BLOG HERO -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1 class="blog-hero-title">Blog & Inspirasi Wisata</h1>
+            <p class="blog-hero-subtitle">Tips perjalanan, destinasi hits, dan rekomendasi kuliner terbaik rute Kediri • Malang • Surabaya</p>
+        </div>
+    </section>
+
+    <!-- BLOG CONTROLS (SEARCH & FILTER) -->
+    <section class="blog-controls-section">
+        <div class="container">
+            <div class="blog-controls-wrapper">
+                <!-- Search Box -->
+                <div class="blog-search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="blogSearch" placeholder="Cari artikel menarik..." class="form-input">
+                </div>
+
+                <!-- Categories -->
+                <div class="blog-categories">
+                    <button class="category-btn active" data-category="semua">Semua</button>
+                    <button class="category-btn" data-category="Tips Wisata">Tips Wisata</button>
+                    <button class="category-btn" data-category="Rute Perjalanan">Rute Perjalanan</button>
+                    <button class="category-btn" data-category="Kuliner">Kuliner</button>
+                    <button class="category-btn" data-category="Destinasi">Destinasi</button>
+                </div>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="blog-posts-grid" id="blogGrid">
+                <!-- Javascript will load the cards dynamically here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING ADD ARTICLE BUTTON -->
+    <button class="floating-add-btn" id="floatingAddBtn" aria-label="Tulis Artikel Baru">
+        <i class="fas fa-plus"></i>
+        <span class="btn-tooltip">Tulis Artikel Baru</span>
+    </button>
+
+    <!-- MODAL: WRITE ARTICLE (CREATE) -->
+    <div class="blog-modal" id="writeModal">
+        <div class="blog-modal-dialog">
+            <div class="blog-modal-header">
+                <h3 class="blog-modal-title"><i class="fas fa-pen-nib"></i> Tulis Artikel Baru</h3>
+                <button class="blog-modal-close" id="closeWriteModal">&times;</button>
+            </div>
+            <div class="blog-modal-body">
+                <form id="writeArticleForm" class="blog-form">
+                    
+                    <div class="blog-form-row">
+                        <!-- Judul Artikel -->
+                        <div class="blog-form-group">
+                            <label for="postTitle"><i class="fas fa-heading"></i> Judul Artikel</label>
+                            <input type="text" id="postTitle" placeholder="Masukkan judul menarik..." required class="form-input">
+                        </div>
+
+                        <!-- Penulis -->
+                        <div class="blog-form-group">
+                            <label for="postAuthor"><i class="fas fa-user-edit"></i> Nama Penulis</label>
+                            <input type="text" id="postAuthor" placeholder="Contoh: Admin L-Roomey" required class="form-input">
+                        </div>
+                    </div>
+
+                    <div class="blog-form-row">
+                        <!-- Kategori -->
+                        <div class="blog-form-group">
+                            <label for="postCategory"><i class="fas fa-tags"></i> Kategori</label>
+                            <select id="postCategory" class="form-input form-select" required>
+                                <option value="" disabled selected>Pilih Kategori</option>
+                                <option value="Tips Wisata">Tips Wisata</option>
+                                <option value="Rute Perjalanan">Rute Perjalanan</option>
+                                <option value="Kuliner">Kuliner</option>
+                                <option value="Destinasi">Destinasi</option>
+                            </select>
+                        </div>
+
+                        <!-- Gambar Artikel (File upload) -->
+                        <div class="blog-form-group">
+                            <label><i class="fas fa-image"></i> Gambar Artikel</label>
+                            <div class="image-upload-wrapper">
+                                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                                <div class="upload-text">Pilih file gambar dari perangkat Anda</div>
+                                <input type="file" id="postImageFile" accept="image/*" required>
+                            </div>
+                            <div class="image-preview-box" id="imagePreviewBox">
+                                <img src="" id="imagePreview" alt="Preview Gambar">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ringkasan Singkat -->
+                    <div class="blog-form-group">
+                        <label for="postExcerpt"><i class="fas fa-align-left"></i> Ringkasan Singkat</label>
+                        <input type="text" id="postExcerpt" placeholder="Ringkasan 1-2 kalimat untuk kartu artikel..." required class="form-input">
+                    </div>
+
+                    <!-- Isi Artikel Lengkap -->
+                    <div class="blog-form-group">
+                        <label for="postContent"><i class="fas fa-paragraph"></i> Isi Artikel Lengkap</label>
+                        <textarea id="postContent" rows="8" placeholder="Tuliskan cerita, tips, atau ulasan lengkap Anda di sini. Gunakan baris baru untuk membagi paragraf..." required class="form-input form-textarea"></textarea>
+                    </div>
+
+                    <!-- Button Kirim -->
+                    <button type="submit" class="btn btn-gold btn-block btn-large">
+                        Publikasikan Artikel <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: READ ARTICLE (DETAIL) -->
+    <div class="blog-modal" id="readModal">
+        <div class="blog-modal-dialog">
+            <div class="blog-modal-header">
+                <span class="blog-modal-title" id="readModalCategory">KATEGORI</span>
+                <button class="blog-modal-close" id="closeReadModal">&times;</button>
+            </div>
+            <div class="blog-modal-body">
+                <div class="detail-img-wrapper">
+                    <img src="" id="readModalImg" alt="Gambar Artikel">
+                </div>
+                <div class="detail-meta">
+                    <span><i class="fas fa-user"></i> <span id="readModalAuthor">Penulis</span></span>
+                    <span><i class="fas fa-calendar-alt"></i> <span id="readModalDate">Tanggal</span></span>
+                </div>
+                <h2 class="detail-title" id="readModalTitle">Judul Artikel</h2>
+                <div class="detail-content" id="readModalContent">
+                    <!-- Dynamic paragraphs will load here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-section">
+        <div class="container footer-container">
+            <div class="footer-col footer-about">
+                <a href="index.html" class="footer-logo">
+                    <span class="logo-accent">L-Roomey</span> <span class="logo-light">Travel</span>
+                </a>
+                <p class="footer-desc">Penyedia jasa transportasi travel eksekutif terbaik yang menghubungkan kota Kediri, Malang, dan Surabaya dengan armada luxury terbaru.</p>
+                <div class="footer-socials">
+                    <a href="https://wa.me/6285800734579" class="social-icon" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h4 class="footer-col-title">Navigasi Cepat</h4>
+                <ul>
+                    <li><a href="index.html#beranda"><i class="fas fa-chevron-right text-gold"></i> Beranda</a></li>
+                    <li><a href="index.html#layanan"><i class="fas fa-chevron-right text-gold"></i> Layanan</a></li>
+                    <li><a href="index.html#armada"><i class="fas fa-chevron-right text-gold"></i> Armada Mobil</a></li>
+                    <li><a href="index.html#keunggulan"><i class="fas fa-chevron-right text-gold"></i> Keunggulan</a></li>
+                    <li><a href="index.html#testimoni"><i class="fas fa-chevron-right text-gold"></i> Testimoni</a></li>
+                    <li><a href="blog.html"><i class="fas fa-chevron-right text-gold"></i> Blog Wisata</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-routes">
+                <h4 class="footer-col-title">Rute Layanan</h4>
+                <ul>
+                    <li><span><i class="fas fa-map-marker-alt text-gold"></i> Kediri - Surabaya (PP)</span></li>
+                    <li><span><i class="fas fa-map-marker-alt text-gold"></i> Kediri - Malang (PP)</span></li>
+                    <li><span><i class="fas fa-map-marker-alt text-gold"></i> Surabaya - Kediri (PP)</span></li>
+                    <li><span><i class="fas fa-map-marker-alt text-gold"></i> Malang - Kediri (PP)</span></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contact">
+                <h4 class="footer-col-title">Kontak Kami</h4>
+                <ul class="contact-details">
+                    <li>
+                        <i class="fas fa-phone-alt text-gold"></i>
+                        <span>0858-0073-4579</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope text-gold"></i>
+                        <span>info@Lroomeytravel.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt text-gold"></i>
+                        <span>Kediri Kota, Jawa Timur, Indonesia</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p class="copyright">&copy; 2026 L-Roomey Travel. All Rights Reserved. Designed for Luxury Travel.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span class="divider">|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/6285800734579" class="whatsapp-floating-btn" id="waFloatingBtn" target="_blank" aria-label="Chat WhatsApp Admin">
+        <i class="fab fa-whatsapp"></i>
+        <span class="floating-tooltip">Butuh bantuan? Chat kami</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="blog.js"></script>
+</body>
+</html>
